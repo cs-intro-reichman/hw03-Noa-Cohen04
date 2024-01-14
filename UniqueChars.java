@@ -15,7 +15,7 @@ public class UniqueChars {
         int i = 1;
         char ch1 =  s.charAt(0);
 
-        while (i < s.length()) {
+        while (i < s.length()) { // #feedback - it is usually better to use "for" loop when iterating on a string.
             ch1 =  s.charAt(i);
             if(ans.indexOf(ch1)==-1 || ch1== 32)
                 ans = ans+ch1;
