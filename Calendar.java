@@ -65,7 +65,7 @@ public class Calendar {
 	 else
 	 	dayOfWeek ++;
 	 
-	 if (nDaysInMonth == 31){
+	 if (nDaysInMonth == 31){ // #feedback - you can just check if dayOfMonth == nDaysInMonth instead of having all these "if"s.
 	 	if (dayOfMonth == 31){
 	 		dayOfMonth =1;
 	 		if(month == 12){
@@ -131,6 +131,8 @@ public class Calendar {
 		 
     // Returns true if the given year is a leap year, false otherwise.
 	private static boolean isLeapYear(int year) {
+		// #feedback - you can return the condition directly -
+		// return ((year % 400) == 0) || (((year % 4) == 0 ) && ((year % 100) != 0))
 	    boolean isLeapYear;
 		// Checks if the year is divisible by 400
 		isLeapYear = ((year % 400) == 0);
@@ -149,7 +151,7 @@ public class Calendar {
 			daysInMonth = 31;
 			else{
 				if(month == 4 || month == 6 || month ==9 || month == 11)
-					daysInMonth= 30;
+					daysInMonth= 30; // #feedback - you can return the number directly instead of having daysInMonth variable - e.g. return 30;
 				else{
 					if (isLeapYear(year))
 						daysInMonth = 29;
